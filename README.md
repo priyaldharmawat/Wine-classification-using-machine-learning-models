@@ -10,7 +10,7 @@ This repository contains the code for a machine learning project that classifies
 
 ## Data
 
-The dataset used in this project is the Wine Quality dataset from the UCI Machine Learning Repository ([link to dataset if available, otherwise link to UCI ML repo](https://archive.ics.uci.edu/ml/datasets/wine+quality)). It combines red and white wine data and contains the following attributes:
+The dataset used in this project is the Wine Quality dataset from the UCI Machine Learning Repository. It combines red and white wine data and contains the following attributes:
 
 *   **Fixed Acidity:** tartness of the wine.
 *   **Volatile Acidity:** amount of acetic acid in wine.

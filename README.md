@@ -81,7 +81,7 @@ Here's a summary of the best-performing models (replace with your actual results
 
 ## Author
 
-Priya Dharmawat
+Priyal Dharmawat
 
 ---
 

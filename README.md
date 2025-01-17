@@ -49,9 +49,7 @@ The core code is in the `wine_quality_classification.py` file. It performs the f
 
 ## Running the Code
 
-1.  Clone this repository: `git clone https://github.com/[YourUsername]/[YourRepository].git`
-2.  Navigate to the project directory: `cd [YourRepository]`
-3.  Install the required libraries: `pip install -r requirements.txt` (Create a `requirements.txt` file listing dependencies like `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`). Example:
+1.  Install the required libraries: `pip install -r requirements.txt` (Create a `requirements.txt` file listing dependencies like `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`). Example:
     ```
     pandas
     numpy
@@ -60,13 +58,13 @@ The core code is in the `wine_quality_classification.py` file. It performs the f
     seaborn
     statsmodels
     ```
-4.  Run the script: `python wine_quality_classification.py`
+2.  Run the script: `python wine_quality_classification.py`
 
 ## Results
 
 The project found that the **Random Forest** model generally performed best in terms of accuracy, recall, and precision. The results are visualized in a bar chart within the script output. The optimal k value for KNN was found to be 1. The optimized Neural Network didn't show significant improvement over the basic Neural Network models.
 
-Here's a summary of the best performing models (replace with your actual results):
+Here's a summary of the best-performing models (replace with your actual results):
 
 *   **Random Forest:**
     *   Accuracy: 0.673
@@ -84,10 +82,6 @@ Here's a summary of the best performing models (replace with your actual results
 ## Author
 
 Priya Dharmawat
-
-## License
-
-[Choose a license, e.g., MIT License](LICENSE) (Create a LICENSE file if using one)
 
 ---
 

@@ -1,94 +1,93 @@
-# Wine-classification-using-machine-learning-models
+# Wine Quality Classification
 
-# Model Performance Comparison
+This repository contains the code for a machine learning project that classifies the quality of wine (red and white) based on various chemical properties. The project utilizes several classification algorithms, including K-Nearest Neighbors (KNN), Decision Tree, Random Forest, Gradient Boosting, and Neural Networks.
 
-This repository contains an analysis of different machine learning models by comparing their performance metrics: **Accuracy**, **Recall**, and **Precision**.
+## Project Goals
 
-## Table of Contents
-- [Overview](#overview)
-- [Dataset](#dataset)
-- [Models](#models)
-- [Evaluation Metrics](#evaluation-metrics)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+*   Explore and analyze the Wine Quality dataset.
+*   Build and evaluate machine learning models for wine quality classification.
+*   Compare the performance of different models and identify the most effective one.
 
-## Overview
-This project aims to evaluate multiple machine learning models and compare their performance using a bar chart visualization. The models analyzed include:
-- Logistic Regression
-- Random Forest
-- Gradient Boosting
+## Data
 
-## Dataset
-The dataset used for training and testing the models is not included in this repository for privacy reasons. You can substitute your own dataset in the provided code structure.
+The dataset used in this project is the Wine Quality dataset from the UCI Machine Learning Repository ([link to dataset if available, otherwise link to UCI ML repo](https://archive.ics.uci.edu/ml/datasets/wine+quality)). It combines red and white wine data and contains the following attributes:
 
-## Models
-The following models were trained and evaluated:
-1. **Logistic Regression**
-2. **Random Forest**
-3. **Gradient Boosting**
+*   **Fixed Acidity:** tartness of the wine.
+*   **Volatile Acidity:** amount of acetic acid in wine.
+*   **Citric Acid:** acts as a preservative and adds flavor.
+*   **Residual Sugar:** amount of sugar remaining after fermentation.
+*   **Chlorides:** amount of salt in the wine.
+*   **Free Sulfur Dioxide:** prevents microbial growth and oxidation.
+*   **Total Sulfur Dioxide:** total amount of SO2 in the wine.
+*   **Density:** density of the wine.
+*   **pH:** acidity level of the wine.
+*   **Sulphates:** amount of sulfur added to the wine.
+*   **Alcohol:** percentage of alcohol in the wine.
+*   **Quality:** quality score between 0 and 10 (target variable).
+*   **Wine:** Type of wine (red or white)
 
-## Evaluation Metrics
-The models are evaluated using the following metrics:
-- **Accuracy**: Measures the overall correctness of the model.
-- **Recall**: Measures the ability of the model to correctly identify positive instances.
-- **Precision**: Measures the proportion of positive identifications that were actually correct.
+## Code
 
-## Installation
-To run this project locally, follow these steps:
+The core code is in the `wine_quality_classification.py` file. It performs the following steps:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/model-performance-comparison.git
-   cd model-performance-comparison
-   ```
+1.  **Data Loading and Preprocessing:**
+    *   Loads the data from `wine.csv`.
+    *   Encodes the 'wine' categorical feature using Label Encoding.
+    *   Splits the data into training (70%) and testing (30%) sets.
+    *   Scales the features using StandardScaler.
+2.  **Model Building and Evaluation:**
+    *   **K-Nearest Neighbors (KNN):** Determines the optimal `k` value using cross-validation and plots an elbow curve.
+    *   **Decision Tree:** Trains and evaluates a Decision Tree Classifier.
+    *   **Random Forest:** Trains and evaluates a Random Forest Classifier.
+    *   **Gradient Boosting:** Trains and evaluates a Gradient Boosting Classifier.
+    *   **Neural Networks:**
+        *   Trains and evaluates Multi-layer Perceptron (MLP) classifiers with 'adam' and 'sgd' solvers.
+        *   Performs hyperparameter tuning using GridSearchCV to optimize the neural network architecture.
+3.  **Model Comparison:**
+    *   Compares the performance of all models based on accuracy, recall, and precision.
+    *   Visualizes the results using a bar chart.
 
-2. Create a virtual environment and activate it:
-   ```bash
-   python -m venv env
-   source env/bin/activate  # On Windows, use `env\Scripts\activate`
-   ```
+## Running the Code
 
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Usage
-
-1. Update the `models`, `accuracy`, `recall`, and `precision` variables in the script to match your results.
-2. Run the script to generate the bar plot:
-   ```bash
-   python plot_metrics.py
-   ```
-3. The bar chart comparing model performance will be displayed.
+1.  Clone this repository: `git clone https://github.com/[YourUsername]/[YourRepository].git`
+2.  Navigate to the project directory: `cd [YourRepository]`
+3.  Install the required libraries: `pip install -r requirements.txt` (Create a `requirements.txt` file listing dependencies like `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`). Example:
+    ```
+    pandas
+    numpy
+    scikit-learn
+    matplotlib
+    seaborn
+    statsmodels
+    ```
+4.  Run the script: `python wine_quality_classification.py`
 
 ## Results
-The bar chart below provides a visual comparison of the models based on the evaluation metrics:
 
-![Model Performance Comparison](path/to/your/image.png)
+The project found that the **Random Forest** model generally performed best in terms of accuracy, recall, and precision. The results are visualized in a bar chart within the script output. The optimal k value for KNN was found to be 1. The optimized Neural Network didn't show significant improvement over the basic Neural Network models.
 
-## Contributing
-Contributions are welcome! Please follow these steps:
-1. Fork this repository.
-2. Create a branch for your feature:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Description of changes"
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a Pull Request.
+Here's a summary of the best performing models (replace with your actual results):
+
+*   **Random Forest:**
+    *   Accuracy: 0.673
+    *   Recall: 0.673
+    *   Precision: 0.674
+
+## Future Work
+
+*   Explore feature engineering to potentially improve model performance.
+*   Investigate other classification algorithms.
+*   Perform more extensive hyperparameter tuning for all models.
+*   Analyze feature importance to understand which chemical properties most influence wine quality.
+*   Consider using different evaluation metrics like F1-score.
+
+## Author
+
+Priya Dharmawat
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+[Choose a license, e.g., MIT License](LICENSE) (Create a LICENSE file if using one)
 
 ---
 
